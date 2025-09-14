@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: # ur app-name
+  profiles:
+    active: # give this native
+  cloud:
+    config:
+      server:
+        native:
+          search-location: # give this classpath:/config
+          # fetch all the config which is in this folder
+
+server:
+  port:  # server-port (eg: 8081 or 8082...)

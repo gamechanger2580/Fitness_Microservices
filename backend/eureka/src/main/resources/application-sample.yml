@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: # ur app-name
+
+server:
+  port:  # server-port (eg: 8081 or 8082...)
+
+eureka:
+  client:
+    register-with-eureka: # write false
+    fetch-registry: # write false
+
