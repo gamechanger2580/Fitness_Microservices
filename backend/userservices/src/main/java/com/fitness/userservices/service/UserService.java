@@ -6,12 +6,14 @@ import com.fitness.userservices.dto.UserResponse;
 import com.fitness.userservices.model.User;
 import com.fitness.userservices.repository.UserRepository;
 import jakarta.validation.Valid;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
+@Slf4j
 public class UserService {
 
     Logger logger = LoggerFactory.getLogger(UserService.class);
@@ -69,6 +71,7 @@ public class UserService {
 
 
     public Boolean existyByUserId(String userId) {
+        log.info("Calling User Validation API for userId: " + userId);
         return userRepository.existsById(userId);
     }
 }
