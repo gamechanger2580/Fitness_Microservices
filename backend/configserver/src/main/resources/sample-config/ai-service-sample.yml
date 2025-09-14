@@ -1,0 +1,31 @@
+server:
+  port : # server-port (eg: 8081 or 8082...)
+
+spring:
+  data:
+    mongodb:
+      uri: # mongodb connection string
+      database: # db name of mongodb
+    rabbitmq:
+      host: # rabbitmq host
+      port: # rabbitmq port
+      username: # rabbitmq username
+      password: # rabbitmq password
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: # ur eureka url
+
+rabbitmq:
+  exchange:
+    name: # rabbitmq-exhange name
+  queue:
+    name: # rabbitmq queue name
+  routing:
+    key: # rabbitmq routing key
+
+gemini:
+  api:
+    url: # ur gemini url
+    key: # gemini api key

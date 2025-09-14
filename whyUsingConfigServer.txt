@@ -1,0 +1,12 @@
+**REMOVED**
+
+**REMOVED**
+
+
+Why Config Server:
+- Instead of all the microservices having their own config file we will be centralizing it.
+- The control is centralized
+- Will use spring cloud config
+- Centralized Control and easy to maintain
+- Sepration of concerns
+- Best Practice if scalling application.

@@ -1,0 +1,20 @@
+server:
+  port: # server-port (eg: 8081 or 8082...)
+  
+spring:
+  datasource:
+    url: # postgres connection string
+    username: # username of ur postgres
+    password: # passward of ur postgres
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: # postgres dialect
+        ddl-auto: # ddl type first do create then update
+      show-sql: # want to show sql in terminal : true or false
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: # ur eureka url

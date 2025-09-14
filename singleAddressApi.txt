@@ -1,0 +1,4 @@
+Now that we have 4 different microservices, but it is a big issue
+- As it should be shown as a whole service and not different different
+- So we have to show it as one
+- So we have to setup a API gateway which will be our single point of contact and will expose a single end point to the client or the one who will access all the services
