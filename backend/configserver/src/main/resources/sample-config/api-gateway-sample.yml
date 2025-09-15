@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: # ur user service app name
+              uri: # lb://whatever eureka has registered as user service
+              predicates:
+                - # Path=/endpt same as what given in controller
+            # in same format add for other if more
+
+  port: # port no
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: # eureka server address
