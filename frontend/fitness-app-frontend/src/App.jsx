@@ -18,7 +18,7 @@ const ActivitiesPage = () => {
   return (
     <Box component={"section"} sx={{ p: 2, border: "1px dashed grey" }}>
       {" "}
-      <ActivityForm onActivitiesAdded={() => window.location.reload()} />
+      <ActivityForm onActivityAdded={() => window.location.reload()} />
       <ActivityList />
     </Box>
   );
@@ -45,6 +45,9 @@ function App() {
         </Button>
       ) : (
         <Box component={"section"} sx={{ p: 2, border: "1px dashed grey" }}>
+          <Button variant="contained" color="secondary" onClick={logOut}>
+            LogOut
+          </Button>
           <Routes>
             <Route path="/activities" element={<ActivitiesPage />} />
             <Route path="/activities/:id" element={<ActivityDetail />} />
