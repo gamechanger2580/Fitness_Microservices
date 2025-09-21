@@ -13,6 +13,11 @@ import { setCredentials } from "./store/authSlice";
 import ActivityForm from "./components/ActivityForm";
 import ActivityList from "./components/ActivityList";
 import ActivityDetail from "./components/ActivityDetail";
+import ShuffleHero from "./components/ShuffleHero";
+
+const PrivateRoute = ({ children, token }) => {
+  return token ? children : <Navigate to="/" replace />;
+};
 
 const ActivitiesPage = () => {
   return (
@@ -21,6 +26,16 @@ const ActivitiesPage = () => {
       <ActivityForm onActivityAdded={() => window.location.reload()} />
       <ActivityList />
     </Box>
+  );
+};
+
+const NeuButton = () => {
+  return (
+    <div className="bg-white min-h-[200px] flex items-center justify-center">
+      <button className="px-6 py-2 font-medium bg-indigo-500 text-white w-fit transition-all shadow-[3px_3px_0px_black] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px]">
+        Hover me
+      </button>
+    </div>
   );
 };
 
@@ -46,7 +61,7 @@ function App() {
       ) : (
         <Box component={"section"} sx={{ p: 2, border: "1px dashed grey" }}>
           <Button variant="contained" color="secondary" onClick={logOut}>
-            LogOut
+            <p>LogOut</p>
           </Button>
           <Routes>
             <Route path="/activities" element={<ActivitiesPage />} />
